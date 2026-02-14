@@ -20,7 +20,7 @@ This document describes the required tables for authentication and session track
 - Id (GUID) – Primary Key  
 - UserId (FK)  
 - Code  
-- SessionId  
+- SessionId  (GUID)
 - ExpiresAt  
 - IsUsed  
 - CreatedAt  
