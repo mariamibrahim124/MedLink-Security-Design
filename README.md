@@ -1,1 +1,1 @@
-# MedMap-Security-Design
+# MedMap Security & Authentication Design
