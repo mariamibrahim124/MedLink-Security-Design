@@ -7,3 +7,4 @@ For security details, see Security-Improvements.md
 - [JWT Structure](docs/jwt-structure.md)
 - [Authorization Middleware](docs/authorization-middleware.md)
 - [Security_Improvements](docs/security_improvements.md)
+- [Payment-Gateway](docs/payment-gateway)
