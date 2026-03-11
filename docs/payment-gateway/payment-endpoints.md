@@ -1,0 +1,62 @@
+# Payment API Endpoints
+
+This document describes the API endpoints required to process payments.
+
+---
+
+## 1. Initiate Payment
+
+POST /api/payments/initiate
+
+Description:
+
+Creates a payment session and returns the payment page URL for the client.
+
+Request Body:
+
+{
+  "orderId": "GUID"
+}
+
+Response:
+
+{
+  "paymentUrl": "https://paymob.com/payment-page"
+}
+
+Process:
+
+1. Validate the order exists.
+2. Verify the order status is Pending.
+3. Create a payment record in the database.
+4. Request payment session from Paymob.
+5. Return the payment URL.
+
+---
+
+## 2. Get Payment Status
+
+GET /api/payments/status/{orderId}
+
+Description:
+
+Returns the payment status of a specific order.
+
+Response:
+
+{
+  "orderId": "GUID",
+  "paymentStatus": "Pending | Paid | Failed"
+}
+
+---
+
+## 3. Payment Webhook
+
+POST /api/payments/webhook
+
+Description:
+
+Endpoint used by Paymob to notify the system about payment status updates.
+
+This endpoint must verify the webhook request before updating payment status.
