@@ -1,4 +1,4 @@
-# MedMap Security & Authentication Design
+# MedLink Security & Authentication Design
 For security details, see Security-Improvements.md
 ## Documentation
 
